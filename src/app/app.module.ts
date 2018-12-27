@@ -5,13 +5,15 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ManagerComponent } from './manager/manager.component';
 import { appRoutes } from './routerConfig';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    ManagerComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes)

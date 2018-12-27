@@ -1,0 +1,15 @@
+.mgr{
+    text-align: left;
+
+} 
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    background-color: #ddd;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
