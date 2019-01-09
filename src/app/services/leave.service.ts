@@ -17,7 +17,7 @@ const httpOptions = {
 })
 export class LeaveService {
 
-  url: string = "http://localhost:8989/employees";
+  url: string = "http://localhost:3000/leave";
   
   constructor(public http: HttpClient) {
   }
