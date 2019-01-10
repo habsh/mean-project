@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { Leave } from 'src/app/models/leave';
@@ -14,6 +14,7 @@ export class ApplyLeaveComponent implements OnInit {
   leave: Leave = new Leave();
   error: boolean = false;
   errorMsg: string = '';
+  disableSave: boolean = false;
 
   constructor(private leaveSvc: LeaveService, private router: Router) { }
 
@@ -22,10 +23,11 @@ export class ApplyLeaveComponent implements OnInit {
     this.leave.empId =  +localStorage.getItem("empId");
     this.leave.leaveType = 'EL';
   }
+
   //OnStartDate Changed
   onStartDateChanged = (value: any) => {
     this.leave.startDate = value;
-    
+
     if (this.leave.endDate != undefined)
       this.calculateNumberOfDays(this.leave.startDate, this.leave.endDate);
   }
@@ -80,8 +82,6 @@ export class ApplyLeaveComponent implements OnInit {
     let day = dt.getDate() < 10? '0' + dt.getDate(): dt.getDate();
 
     let today = new Date(yr+'-'+month+'-'+day);
-
-    console.log('start',startDt,'end',endDt,'today',yr+'-'+month+'-'+day);
 
     var msDateStart = Date.UTC(start.getFullYear(), start.getMonth()+1, start.getDate());
     var msDateEnd = Date.UTC(end.getFullYear(), end.getMonth()+1, end.getDate());
