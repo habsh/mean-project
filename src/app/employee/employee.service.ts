@@ -8,7 +8,7 @@ import { from, Observable } from 'rxjs';
 })
 export class EmployeeService {
 
-  empUrl = 'http://localhost:4000/employees';
+  empUrl = 'http://localhost:3000/leave';
 
   constructor(private http: HttpClient) { }
 
