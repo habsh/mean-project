@@ -23,7 +23,7 @@ export class ViewLeaveComponent implements OnInit {
   }
 
   applyLeave() {
-    this.router.navigateByUrl('/applyLeave');
+    this.router.navigateByUrl(`/applyLeave/${localStorage.getItem("empId")}`);
   }
   viewLeave = (id: string) => {
     this.leaveSvc.viewLeave(id).subscribe((res:Employee) => {
