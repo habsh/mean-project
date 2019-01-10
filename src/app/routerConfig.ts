@@ -12,6 +12,7 @@ export const appRoutes: Routes = [
   { path: 'dashboard/:id', component: DashboardComponent },
   { path: 'mysection/:id', component: EmployeeDetailsComponent },
   { path: 'mymgrsec/:id', component: ManagerComponent },
-  { path: 'myleave/:id', component: ApplyLeaveComponent },
-  { path: 'myrptleave/:id', component: ViewLeaveComponent }
+  { path: 'myleave/:id', component: ViewLeaveComponent },
+  { path: 'applyLeave/:id', component: ApplyLeaveComponent }
+  //{ path: 'myrptleave/:id', component:  }
 ];

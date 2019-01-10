@@ -107,6 +107,6 @@ export class ApplyLeaveComponent implements OnInit {
     this.errorMsg = errorMsg;
   }
   cancel = () => {
-    this.router.navigateByUrl('/viewLeave');
+    this.router.navigateByUrl(`/myleave/${this.leave.empId}`);
   }
 }

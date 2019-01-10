@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("empId", userId.toString());
 
       console.log('userId :' + userId);
-      this.router.navigate([`/dashboard/:${empId}`]);
+      this.router.navigate([`/dashboard/${userId}`]);
     }
   }
 }
