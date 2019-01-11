@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Leave } from 'src/app/models/leave';
 import { LeaveService } from 'src/app/services/leave.service';
 import { AppError } from 'src/app/models/appError';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'apply-leave',
@@ -15,6 +16,7 @@ export class ApplyLeaveComponent implements OnInit {
   error: boolean = false;
   errorMsg: string = '';
   disableSave: boolean = false;
+  @ViewChild(NgForm) leaveForm: NgForm;
 
   constructor(private leaveSvc: LeaveService, private router: Router) { }
 
