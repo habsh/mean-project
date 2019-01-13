@@ -14,14 +14,13 @@ const httpOptions = {
 })
 export class EmployeeService {
 
-  url: string = "http://localhost:8989/employee";
+  url: string = "http://localhost:3000/employees";
 
   constructor(public http: HttpClient) {
 
   }
   getMgr(id: number): Observable<any> {
-    console.log(id);
-    return this.http.get<any>(this.url + '/getmanagerdetails', httpOptions)
+    return this.http.get<any>(this.url + `/manager/${id}`, httpOptions)
       .pipe(
         catchError(err => this.handleError(err, id))
       );
