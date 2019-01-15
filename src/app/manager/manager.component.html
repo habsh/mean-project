@@ -1,37 +1,41 @@
-<div class="mgr container mt-5">
-  <h2>Manager Detail Section</h2>
-  <div class="row">
-    <div class="column">
-      <p>Employee ID</p>
-    </div>
-    <div class="column">
-      <p>: NNNNN</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <p>Full Name</p>
-    </div>
-    <div class="column">
-      <p>XXXX XXXX</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="column">
-      <p>Email</p>
-    </div>
-    <div class="column">
-      <p>xxx.xxx@xxx.com </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <p>Mobile Number</p>
-    </div>
-    <div class="column">
-      <p>+1 (000) 000-0000</p>
-    </div>
+<a class="card-title" (click)="toHome()"> Back to Dashboard</a>
+<div class="container" *ngIf="employee">
+  <h2 class="float-left">Manager Detail Section</h2>
+  <div class="clearfix"></div>
+  <div class="section  text-left">
+    <form>
+      <div class="row">
+        <div class="col-md-3 ">
+          <span>Employee ID</span>
+        </div>
+        <div class="col-md-3">
+          <span>: {{employee.empId}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 ">
+          <span>Full Name</span>
+        </div>
+        <div class="col-md-3">
+          <span>: {{employee.empName}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 ">
+          <span>Mobile Phone ID</span>
+        </div>
+        <div class="col-md-3 ">
+          <span>: {{employee.empPhone}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <span>Email</span>
+        </div>
+        <div class="col-md-3">
+          <span>: {{employee.empEmail}}</span>
+        </div>
+      </div>
+    </form>
   </div>
 </div>

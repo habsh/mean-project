@@ -3,3 +3,8 @@ export class AppError {
     message: string;
     friendlyMessage: string;
 }
+
+export class missingEmployee {
+    status: number;
+    error: string;
+}
