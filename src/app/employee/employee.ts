@@ -1,10 +1,10 @@
 export interface IEmployee {
-    EMP_ID: string;
-    EMP_NAME: string;
-    EMP_PHONE: string;
-    EMP_DEPT: string;
-    EMP_MAIL: string;
-    EMP_DOJ: Date;
-    LEAVE_BALANCE: number;
-    EMP_MGR_ID: number;
+    empId: string;
+    empName: string;
+    empPhone: string;
+    empDept: string;
+    empEmail: string;
+    empDoj: Date;
+    leaveBalance: number;
+    empManagerId: number;
 }

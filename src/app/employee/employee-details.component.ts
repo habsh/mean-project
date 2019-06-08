@@ -19,7 +19,7 @@ export class EmployeeDetailsComponent implements OnInit {
   ngOnInit() {
     this.empId = +this.activatedRoute.snapshot.params['id'];
     this.httpSvc.getEmployoees().subscribe(
-      emps => this.employee = emps.find(e=>+e.EMP_ID === this.empId)
+      emps => this.employee = emps.find(e=>+e.empId === this.empId)
     );
   }
 
